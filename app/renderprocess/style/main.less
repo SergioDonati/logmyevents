@@ -1,0 +1,58 @@
+@import "colors";
+@import "font";
+@import "modal";
+@import "cards";
+
+html, body{
+	height: 100%;
+	background-color: @backgroundColor;
+}
+body{
+	background-color: @backgroundColor;
+	font-size: @fontSize;
+	font-family: @fontFamily;
+	padding: 0px 20px;
+}
+
+form{
+	text-align: center;
+}
+label{
+	text-align: left;
+	font-weight: 600;
+}
+.btn > .fa{
+	margin-right: 5px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+}
+
+.container-flex{
+	display:flex;
+	align-items:center;
+	> .flex-col{
+		display: inline-block;
+		margin-left: 10px;
+		:last-child{
+			margin-left: 0px;
+		}
+	}
+	> .item-flex{
+		flex:1;
+	}
+}

@@ -1,0 +1,60 @@
+@import "colors";
+#modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	display: none;
+	&.modal-open{
+		display: block;
+	}
+	.modal-shadow{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: #474747;
+		z-index: 60;
+		opacity: 0.8;
+	}
+	.modal-box{
+		z-index: 65;
+		position: relative;
+		max-width: 750px;
+		min-width: 450px;
+		margin: 0 auto;
+		border-radius: 3px;
+		text-align: center;
+		top: 30px;
+		padding: 30px 15px;
+		padding-top: 10px;
+		max-height: calc(~'100% - 60px');
+		overflow: hidden;
+		color: white;
+		box-shadow: 1px 1px 5px 0px black;
+		background-color: @backgroundColorActive;
+		p, h1, h2, h3, h4, h5, h6{
+			color: white;
+		}
+		table.table tbody{
+			color: black;
+		}
+	}
+	.modal-close-btn{
+		position: absolute;
+		color: white;
+		top:4px;
+		right: 6px;
+		font-size: 10px;
+		z-index:70;
+		cursor: pointer;
+		width: 30px;
+    	height: 30px;
+		&:before{
+			content: '\274c';
+			top: 9px;
+			position: relative;
+		}
+	}
+}
