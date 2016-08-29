@@ -63,4 +63,4 @@ class TagsCollection extends Collection{
     get user(){ return this._user; }
 }
 
-module.exports = new CompaniesCollection(DB, tagModel);
+module.exports = new TagsCollection(DB, tagModel);

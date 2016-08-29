@@ -1,0 +1,16 @@
+{
+  "name": "logmyevents",
+  "version": "0.0.4",
+  "private": true,
+  "description": "A minimal Electron application",
+  "main": "mainprocess/index.js",
+  "scripts": {
+    "start": "electron mainprocess/index.js"
+  },
+  "author": "donati.sergio@gmail.com",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "lokijs": "^1.4.1",
+    "easyone-electron": "git+https://git@github.com/SergioDonati/easyone-electron.git"
+  }
+}

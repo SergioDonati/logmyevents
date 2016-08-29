@@ -10,6 +10,10 @@ module.exports = class Login extends Controller {
 	init(){
 		this.on('rendered', this.registerElements);
 		this.addDOMListener('onSubmit', this.login.bind(this));
+		app.getCollections('Users').insert({
+			username: 'sergio',
+			password: 'prova'
+		});
 	}
 
 	registerElements(parent){

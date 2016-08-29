@@ -52,7 +52,8 @@ function activateNavLink(link){
 
 function addNavListener(name, listener){
 	try{
-		let navLink = document.querySelector('#main-header nav a[href="#'+name+'"]');
+		let navLink = document.querySelector('#main-sidebar nav a[href="#'+name+'"]');
+		if(!navLink) return;
 		navLink.addEventListener('click', function(e){
 			e.preventDefault();
 			if(navLink.classList.contains('active')) return; // just active
@@ -74,23 +75,4 @@ app.controllerManager.on('changed', function(controllerManager, controller){
 		let dashLink = document.querySelector('#main-header nav a[href="#dashboard"]');
 		if (dashLink) dashLink.classList.add('active');
 	}
-});
-
-document.getElementById("window-min-btn").addEventListener("click", function (e) {
-   var window = remote.getCurrentWindow();
-   window.minimize();
-});
-
-document.getElementById("window-max-btn").addEventListener("click", function (e) {
-   var window = remote.getCurrentWindow();
-   if (!window.isMaximized()) {
-       window.maximize();
-   } else {
-       window.unmaximize();
-   }
-});
-
-document.getElementById("window-close-btn").addEventListener("click", function (e) {
-   var window = remote.getCurrentWindow();
-   window.close();
 });

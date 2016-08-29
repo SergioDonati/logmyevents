@@ -67,4 +67,4 @@ class EventsCollection extends Collection{
     get user(){ return this._user; }
 }
 
-module.exports = new CompaniesCollection(DB, eventModel);
+module.exports = new EventsCollection(DB, eventModel);

@@ -1,73 +1,27 @@
 @import "colors";
 
-header#main-header{
-	-webkit-app-region: drag;
-	-webkit-user-select: none;
-	background: rgba(51, 122, 183,0.5);
+#main-sidebar{
+	background: #3e3e3e;
+    color: white;
+    margin-right: 50px;
+    padding: 15px 20px;
 	background-color: @backgroundColorActive;
-	padding: 5px;
-	line-height: 30px;
-	vertical-align: middle;
+	color: @textColorActive;
 	display: flex;
-    align-items: center;
-    justify-content: flex-start;
-	color: white;
-	letter-spacing: 2px;
-	border-bottom: 1px solid black;
-	a, button{
-		-webkit-app-region: no-drag;
-	}
-	nav{
-		flex: 1;
-	}
-	nav a{
-		color: #8c8c8c;
-		font-size: 1.2em;
-		margin-right: 15px;
-	    text-shadow: 1px 1px 0px black;
-		text-decoration: none;;
-		&.active, &:hover{
-			color: #FFFFFF;
-		}
-	}
-	#brand{
-		margin-right: 50px;
-		img{
-			max-height: 30px;
-			vertical-align: top;
-		}
-		.brand-name{
-			display: inline-block;
-			font-size: 1.5em;
-			font-weight: 600;
-			letter-spacing: 2px;
-			text-shadow: 1px 1px 0px black;
-		}
-	}
-	#window-btns a{
-		color: white;
-		cursor: pointer;
-		font-size: 1.2em;
-		line-height: initial;
-		padding: 2px 10px;
-		width: 40px;
-		text-align: center;
+	flex-direction: column;
+
+	.user-name{
 		display: inline-block;
-		&:hover{
-			background: #a7a7a7;
-		}
-		&#window-close-btn:hover{
-			background: #d61a1a;
-		}
+		font-size: 1.5em;
+		font-weight: 600;
+		letter-spacing: 2px;
+		text-shadow: 1px 1px 0px black;
 	}
 }
 
 #body{
-	overflow-y: auto;
-	/*height: -webkit-calc(100% - (44px));*/
-	height: calc(~'100% - (34px)');
-	padding: 0 20px;
-	padding-bottom: 20px;
+	padding: 20px;
+	flex: 1;
 }
 html body{
 	padding: 0;
@@ -76,6 +30,7 @@ html body{
 body{
 	min-width: 900px;
 	overflow-x: auto;
+	display: flex;
 }
 
 input:invalid {

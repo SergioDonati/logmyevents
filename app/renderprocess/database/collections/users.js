@@ -35,11 +35,6 @@ class UsersCollection extends Collection{
 		});
 	}
 
-	insert(user){
-		user.company.ownerRef = '_null';
-		return super.insert(user);
-	}
-
 	login(username, password, callback){
 		return this.collection.findOne({ '$and': [{username: username}, {password: password}] });
 	}

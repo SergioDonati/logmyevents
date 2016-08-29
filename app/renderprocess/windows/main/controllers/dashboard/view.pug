@@ -1,7 +1,16 @@
 .panel.panel-primary
 	.panel-heading
-		h3.panel-title Mese
+		h3.panel-title #{new Date(currentDate).toLocaleDateString(undefined, {month: 'long'})}, #{new Date(currentDate).toLocaleDateString(undefined, {year: 'numeric'})}
 	.panel-body
-		- var day = 1
-		while day < daysInMonth
-			.day #{day++}
+		.days
+			- var day = 1
+			while day < daysInMonth
+				.day #{day++}
+	.panel-footer(style="min-height:50px;")
+		button.btn.btn-default.pull-left
+			span.fa.fa-long-arrow-left
+			| #{new Date(prevDate).toLocaleDateString(undefined, {month: 'long'})}, #{new Date(prevDate).toLocaleDateString(undefined, {year: 'numeric'})}
+
+		button.btn.btn-default.pull-right
+			| #{new Date(nextDate).toLocaleDateString(undefined, {month: 'long'})}, #{new Date(nextDate).toLocaleDateString(undefined, {year: 'numeric'})}
+			span.fa.fa-long-arrow-right.fa-margin-left

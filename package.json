@@ -1,10 +1,10 @@
 {
   "name": "logmyevents",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "postinstall": "install-app-deps",
-    "start": "npm install && electron ./app",
+    "start": "electron ./app",
     "pack": "build --dir --x64",
     "dist": "build --x64"
   },

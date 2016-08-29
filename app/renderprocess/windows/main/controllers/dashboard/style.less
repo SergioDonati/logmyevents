@@ -9,3 +9,21 @@ align-items: flex-start;
 
 height: 100%;
 overflow: hidden;
+
+.days{
+	display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+	.day{
+		width: 120px;
+		height: 80px;
+		border: 1px solid #828282;
+		padding: 10px;
+		transition: all .5s ease;
+	}
+	.day:hover{
+		box-shadow: inset 0px 0px 80px #4e6eca;
+	}
+}
